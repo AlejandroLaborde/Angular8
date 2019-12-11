@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeroesComponent implements OnInit {
 
   
-  private heroes:any[]=[
+    heroes:any[]=[
     {
       nombre: "Aquaman",
       bio: "El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.",
@@ -63,6 +63,10 @@ export class HeroesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  mostrar(index) {
+   console.log(index);
   }
 
 }
