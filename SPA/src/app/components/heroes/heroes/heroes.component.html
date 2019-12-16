@@ -2,22 +2,17 @@
 
 
 <div class="card-columns">
-<<<<<<< HEAD
+
     <div class="card"   *ngFor="let heroe of heroes; let i = index">
-=======
-    <div class="card"   *ngFor="let heroe of heroes ; let i=index">
->>>>>>> 28e1dd98fd265794213c8e39f352a8c0ea9f2ebf
+
         <img class="card-img-top" [src]="heroe.img" alt="">
         <div class="card-body">
             <h4 class="card-title text-center">{{heroe.nombre | uppercase}}</h4>
             <p class="card-text text-center">{{heroe.aparicion}}</p>
         </div>
-<<<<<<< HEAD
         <button (click)="verHeroe(i)" class='btn btn-primary boton'>Ver mas...</button>
         <!-- <a [routerLink]="['/heroe',i]" class="btn btn-primary boton">Ver mas ...</a> -->
-=======
-        <button (click)='mostrar(i)' class="btn btn-primary boton">Ver mas ...</button>
->>>>>>> 28e1dd98fd265794213c8e39f352a8c0ea9f2ebf
+
     </div>
 </div>
 
