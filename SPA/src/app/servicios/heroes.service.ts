@@ -71,4 +71,16 @@ export class HeroeService {
         return this.heroes;
     }
 
+    public filtrarHeroes(busqueda:string){
+      let heroesFiltrados=[];
+      console.log(busqueda);
+      this.heroes.forEach(element => {
+          let nombre= (element.nombre).toLowerCase();
+          if(nombre.includes(busqueda)){
+            heroesFiltrados.push(element);
+          }
+      });
+      return heroesFiltrados;
+    }
+
 }

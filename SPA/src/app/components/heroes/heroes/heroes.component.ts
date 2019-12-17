@@ -26,10 +26,6 @@ export class HeroesComponent implements OnInit {
    console.log(index);
   }
 
-  buscarHeroe(busqueda:string){
-    console.log(busqueda);
-  }
-
 
 
 
