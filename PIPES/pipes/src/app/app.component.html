@@ -1,0 +1,123 @@
+<div class="container">
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"> variable </th>
+        <th scope="col"> pipe </th>
+        <th scope="col"> resultado </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr scope="row">
+        <td> {{ nombre }} </td>
+        <td> uppercase </td>
+        <td> {{ nombre | uppercase }} </td>
+      </tr>
+
+      <tr scope="row">
+        <td> {{ nombre }} </td>
+        <td> lowercase </td>
+        <td> {{ nombre | lowercase }} </td>
+      </tr>
+
+      <tr scope="row">
+        <td> {{ nombre }} </td>
+        <td> slice:5 </td>
+        <td> {{ nombre | slice:5 }} </td>
+      </tr>
+
+      <tr scope="row">
+        <td> {{ nombre }} </td>
+        <td> slice:5:8 </td>
+        <td> {{ nombre | slice:5:8 }} </td>
+      </tr>
+      <tr scope="row">
+        <td> {{ arregloNumeros }} </td>
+        <td> slice:5:8 </td>
+        <td> {{ arregloNumeros | slice:5:8 }} </td>
+      </tr>
+      <tr scope="row">
+        <td> {{ PI }} </td>
+        <td> number: '3.0-0' </td>
+        <td> {{ PI | number: '3.0-0' }} </td>
+      </tr>
+      <tr scope="row">
+        <td> {{ PI }} </td>
+        <td> number: '1.0-2' </td>
+        <td> {{ PI | number: '1.0-2' }} </td>
+      </tr>
+
+      <tr scope="row">
+        <td> {{ PI }} </td>
+        <td> percent </td>
+        <td> {{ PI | percent}} </td>
+      </tr>
+      <tr scope="row">
+        <td> {{ PI }} </td>
+        <td> percent:'2.0-4' </td>
+        <td> {{ PI | percent:'2.0-2'}} </td>
+      </tr>
+
+      <tr scope="row">
+        <td> {{ sueldo }} </td>
+        <td> currency </td>
+        <td> {{ sueldo | currency}} </td>
+      </tr>
+      <tr scope="row">
+        <td> {{ sueldo }} </td>
+        <td> currency:'EUR' </td>
+        <td> {{ sueldo | currency:'EUR':false:''}} </td>
+      </tr>
+
+      <tr scope="row">
+        <td> palabra </td>
+        <td> password </td>
+        <td> {{ palabra | password:mostrar }} </td>
+      </tr>
+      <button (click)="mostrar=!mostrar" class="btn btn-primary">mostrar/ocultar</button>
+
+
+      <div class="container">
+        <hr>
+        <h5>Lista con slice:2:8</h5>
+        <ul>
+          <li *ngFor="let item of arregloNumeros | slice:2:8"> {{item}} </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </tbody>
+  </table>
+
+</div>
