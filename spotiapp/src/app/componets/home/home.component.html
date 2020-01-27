@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="container">
+  <app-loading *ngIf="!servicioCorriendo"></app-loading>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <div class="card-columns">
+    <div *ngFor="let album of albums" class="card">
+      <img src={{album.images[0].url}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{album.name}}</h5>
+        <div class="text-center">
+          <a name="" id="" class="btn btn-outline-danger maxWith" href="#" role="button">Escuchar..</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -8,11 +8,21 @@ import { SpotifiService } from 'src/app/services/spotifi.service';
 })
 export class HomeComponent{
 
-  constructor( private servicioSpotify: SpotifiService) { 
-    this.servicioSpotify.getAuthentification().subscribe(respuesta=>{
-        console.log(respuesta);
-    });
-  }
+  
+  private albums=[];
+  servicioCorriendo:boolean;
 
+  
+  constructor( private servicioSpotify: SpotifiService) { 
+    this.servicioCorriendo=false;
+    setTimeout(() => {
+      this.servicioSpotify.getNewReleases().subscribe((data:any)=>{
+        this.albums= data.albums.items;
+        console.log(this.albums);
+        this.servicioCorriendo=true;
+      });
+    }, 1500);
+
+  }
 
 }
